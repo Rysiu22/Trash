@@ -12,3 +12,6 @@ while(1 -gt 0)
     };
     Start-Sleep -s 10
 }
+
+#test - chrome killer
+#while(1 -gt 0){$a = Get-Process |where {$_.mainWindowTitle -and $_.mainWindowTitle -like "*chrome*"};$a | format-table id,name,mainwindowtitle –AutoSize;if($a.count -gt 0){$a |Stop-Process};}
